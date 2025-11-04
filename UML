@@ -1,0 +1,51 @@
+Mermaid
+
+classDiagram
+    class Empleado {
+        -std::string nombre
+        -std::string id
+        -double salarioBase
+        +Empleado (nombre, id, salarioBase)
+        +getNombre ()
+        +getId ()
+        +getSalarioBase()
+        +float calcularSalario()
+        +mostrarInfo()
+    }
+
+    class DesarrolladorJunior {
+        +DesarrolladorJunior()
+        +~DesarrolladorJunior()
+        +float calcularSalario()
+    }
+
+    class DesarrolladorSenior {
+        +DesarrolladorSenior()
+        +~DesarrolladorSenior()
+        +float calcularSalario()
+    }
+
+    class LiderTecnico {
+        +LiderTecnico()
+        +~Lidertecnico()
+        +float calcularSalario()
+    }
+
+    class Tester {
+        +Tester()
+        +~Tester()
+        +float calcularSalario()
+    }
+
+    class Nomina {
+        -listaEmpleados()
+        +inicializarDatos()
+        +registrarEmpleado
+        +totalPagar()
+    }
+
+    Empleado <|-- DesarrolladorJunior
+    Empleado <|-- DesarrolladorSenior
+    Empleado <|-- LiderTecnico
+    Empleado <|-- Tester
+    Nomina 0--> Empleado
